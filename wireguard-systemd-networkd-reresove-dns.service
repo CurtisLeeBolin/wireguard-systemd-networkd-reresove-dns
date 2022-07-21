@@ -1,0 +1,8 @@
+[Unit]
+Description=Reresolve DNS of all inactive systemd-networkd WireGuard endpoints
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=wireguard-systemd-networkd-reresove-dns.py
